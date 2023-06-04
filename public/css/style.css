@@ -1,57 +1,111 @@
-:root{
-    --brown: #38302e;
-    --light-brown:#6f6866;
-    --light-green: #ccdad1;
-    --medium-green: #9caea9;
-    --gray:#788585;
-    --border-size:3px;
+/* Define variables with values */
+:root {
+  --brown: #38302e;
+  --light-brown: #6f6866;
+  --light-green: #ccdad1;
+  --medium-green: #9caea9;
+  --gray: #788585;
+  --border-size: 3px;
 }
 
-*{
-    box-sizing: border-box;
+/* general css properties */
+* {
+  box-sizing: border-box;
 }
 
-body{
-    background-color: var(--light-green);
-    margin:0;
-    padding:0;
-    font-family: 'Source Sans Pro', sans-serif;
-}
-.navbar{
-    background-color:var(--brown);
-    width: 100%;
-    position: fixed;
+/* body properties */
+body {
+  background-color: var(--light-green);
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
-.navbar a{
-    color:var(--light-green);
+/* navbar */
+.navbar {
+  background-color: var(--brown);
+  width: 100%;
+  position: fixed;
 }
 
-.navbar a:hover{
-    color:aliceblue;
+.navbar a {
+  color: var(--light-green);
 }
 
-.navbar li{
-    padding-left: 50px;
+.navbar a:hover {
+  color: aliceblue;
 }
 
-.hero{
-    background-color: var(--brown);
-    
-    padding: 70px 55px;
-    color:var(--light-green);
+.navbar li {
+  padding-left: 50px;
 }
 
-.title{
-    font-size: 50px;
-    background-color: var(--light-green);
-    color:var(--brown);
-    padding-left: 10px;
-    display: inline-block;
-    border-radius: var(--border-size);
-    box-shadow: 5px 5px var(--light-brown);
+/* main page header css properties */
+.hero {
+  background-color: var(--brown);
+  padding: 70px 55px;
+  color: var(--light-green);
 }
 
-.title a{
-    color: var(--brown);
+/* main page header title css properties */
+.title {
+  font-size: 50px;
+  background-color: var(--light-green);
+  color: var(--brown);
+  padding-left: 10px;
+  display: inline-block;
+  border-radius: var(--border-size);
+  box-shadow: 5px 5px var(--light-brown);
+}
+
+.title a {
+  color: var(--brown);
+}
+
+/* cards for login and signup form */
+.card {
+  border-radius: var(--border-size);
+  border: solid;
+  border-color: var(--brown);
+  margin-left: 20px;
+}
+
+.card-header {
+  color: var(--light-green);
+  background-color: var(--brown);
+  padding: 10px;
+  border-radius: var(--border-size);
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-body2 {
+  padding: 50px;
+  color: var(--light-green);
+  background-color: var(--brown);
+  font-size: 20px;
+  margin: 10px;
+}
+
+/* login and signup form properties */
+.formUserName,
+.formInputValues {
+  display: block;
+}
+
+.formUserName {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.formInputValues {
+  width: 100%;
+  padding: 10px;
+  margin: 5px;
+  font-size: 20px;
+  border-color: var(--brown);
+  border-style: solid;
+  border-radius: var(--border-size);
 }
