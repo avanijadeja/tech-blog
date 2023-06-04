@@ -1,4 +1,7 @@
+// Dependencies.
+// require express.
 const router = require("express").Router();
+// require User model.
 const { User } = require("../../models");
 
 // SIGN UP
@@ -8,12 +11,10 @@ router.post("/signup", async (req, res) => {
       userName: req.body.userName,
       password: req.body.password,
     });
-    console.log("NewUser:" + newUser.userId);
     req.session.save(() => {
       req.session.userId = newUser.id;
       req.session.userName = newUser.userName;
       req.session.loggedIn = true;
-
       res.json(newUser);
     });
   } catch (err) {
@@ -60,4 +61,5 @@ router.post("/logout", (req, res) => {
   }
 });
 
+// export router
 module.exports = router;
