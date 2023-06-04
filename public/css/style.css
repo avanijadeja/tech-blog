@@ -15,6 +15,7 @@
 
 a {
   text-decoration: none;
+  color: var(--brown);
 }
 
 /* body properties */
@@ -56,7 +57,9 @@ body {
 /* main page header css properties */
 .hero {
   background-color: var(--brown);
-  padding: 70px 55px;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  padding-left: 45px;
   color: var(--light-green);
 }
 
@@ -96,18 +99,17 @@ h2 a:visited {
 
 /* cards for login and signup form */
 .card {
+  margin: 0 0 20px 0;
   border-radius: var(--border-size);
   border: solid;
   border-color: var(--brown);
   background-color: var(--light-green);
-
-  margin: 0 0 10px 0;
 }
 
 .card-header {
   color: var(--light-green);
   background-color: var(--brown);
-  padding: 10px;
+  padding: 1%;
   border-radius: var(--border-size);
 }
 .card-header h2 {
@@ -115,12 +117,12 @@ h2 a:visited {
 }
 
 .card-body {
-  padding: 20px;
+  padding: 1%;
   background-color: var(--light-green);
 }
 
 .card-body2 {
-  padding: 50px;
+  padding: 3%;
   color: var(--light-green);
   background-color: var(--brown);
   font-size: 20px;
