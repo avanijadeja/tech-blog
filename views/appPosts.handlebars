@@ -1,0 +1,21 @@
+{{!-- Display all posts for all users --}}
+<div class="row">
+  <div class="col-auto">
+     <h2>{{user.userName}}</h2>
+  </div>
+</div>
+<br>
+{{#if posts.length}}
+<div class="card flex-column">
+    {{!-- for all posts repeat --}}
+  {{#each posts as |post|}}
+  {{!-- replace editItem post --}}
+  {{> editItem post}}
+  {{/each}}
+</div>
+{{/if}}
+
+{{!-- added new post button to create new post --}}
+<footer class="footer flex-row justify-center">
+    <a href="/dashboard/new">➕ New Post</a>
+</footer>

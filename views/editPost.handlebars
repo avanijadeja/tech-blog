@@ -1,0 +1,33 @@
+{{! Edit particular post }}
+<div class="card">
+  <h2 class="card-header">Edit Post</h2>
+  {{! editPost form }}
+  <form class="card-body" id="editPost-form">
+    <div>
+      <label class="FormUserName">Title</label>
+      {{! postTitle from post model  }}
+      <input
+        class="formInputvalues"
+        type="text"
+        name="post-title"
+        value="{{post.postTitle}}"
+      />
+    </div>
+    {{! postContent from post model }}
+    <div>
+      <label class="FormUserName">Content</label>
+      <textarea
+        class="form-textarea formInputvalues"
+        name="post-body"
+        data-number="8"
+      >{{post.postContent}}</textarea>
+    </div>
+    <button class="btn btn-primary" type="submit">Update Post</button>
+    <input type="hidden" name="post-id" value="{{post.id}}" />
+  </form>
+  <div class="card-body">
+    <button class="btn btn-primary" type="click" id="delete-btn">Delete</button>
+  </div>
+</div>
+{{! link to edit.js file }}
+<script src="/js/edit.js"></script>
