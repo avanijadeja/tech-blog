@@ -1,10 +1,10 @@
-// Setup Comment model
+// Setup Post model
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/config");
 
-class Comment extends Model {}
+class Post extends Model {}
 
-Comment.init(
+Post.init(
   {
     // Created columns with individual properties like allownull, primarykey, autoincrement,unqiue,validation etc.
     id: {
@@ -13,7 +13,12 @@ Comment.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    commentData: {
+    postTitle: {
+      type: DataTypes.STRING(25),
+      allowNull: false,
+      unique: true,
+    },
+    postContent: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
@@ -31,21 +36,14 @@ Comment.init(
         key: "id",
       },
     },
-    postId: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "post",
-        key: "id",
-      },
-    },
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "comment",
+    modelName: "post",
   }
 );
-// export Comment model
-module.exports = Comment;
+// export Post model
+module.exports = Post;
