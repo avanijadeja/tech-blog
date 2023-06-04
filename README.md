@@ -57,7 +57,7 @@ so applicaiton now starts user have to write localhost:3001 in browser so user c
 
 The URL of the functional, deployed application -
 
-The URL of the GitHub repository -
+The URL of the GitHub repository - https://github.com/avanijadeja/tech-blog
 
 # Credits
 
