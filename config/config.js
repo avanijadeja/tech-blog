@@ -1,5 +1,6 @@
 const Sequelize = require("sequelize");
 
+// require .env file - in .env file save DB_NAME,DB_USER,DB_PASSWORD,JAWSDB_URL
 require("dotenv").config();
 
 // create connection with db
