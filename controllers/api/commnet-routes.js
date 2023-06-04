@@ -20,7 +20,7 @@ router.get("/", withAuth, async (req, res) => {
   }
 });
 
-// for "/" - if user login post user commnets.
+// for "/" - if user login user post commnets.
 router.post("/", withAuth, async (req, res) => {
   const body = req.body;
   // using spread opertor replace body with user comment data.
