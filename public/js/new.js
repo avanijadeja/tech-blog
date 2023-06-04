@@ -2,7 +2,7 @@
 const newFormHandler = async function (event) {
   event.preventDefault();
   // using queryselector method get values of posttiltle and textarea stored in postTitle and postContent
-  const postTitle = document.querySelector('input[name="post-title"]').value;
+  const postTitle = document.querySelector('input[name="postTitle"]').value;
   const postContent = document.querySelector(
     'textarea[name="post-body"]'
   ).value;
@@ -19,7 +19,7 @@ const newFormHandler = async function (event) {
   // after creating new post redirect page to user /dashboard
   document.location.replace("/dashboard");
 };
-// Eventlistner for newPost-form
+// Eventlistner for newPostform
 document
-  .querySelector("#newPost-form")
+  .querySelector("#newPostform")
   .addEventListener("submit", newFormHandler);

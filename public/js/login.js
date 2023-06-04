@@ -3,8 +3,8 @@
 const loginFormHandler = async function (event) {
   event.preventDefault();
   // get userName and password from login form.
-  const userNameEl = document.querySelector("#userName-input-login");
-  const passwordEl = document.querySelector("#passwordLogininput");
+  const userNameEl = document.querySelector("#userNamelogin");
+  const passwordEl = document.querySelector("#passwordLogin");
 
   const response = await fetch("/api/user/login", {
     method: "POST",

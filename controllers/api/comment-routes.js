@@ -1,7 +1,7 @@
 // require express for router.
 const router = require("express").Router();
 // Comment model.
-const { Comment } = require("../../models/");
+const { Comment } = require("../../models");
 //  withAuth helper function.
 const withAuth = require("../../utils/auth");
 

@@ -15,18 +15,18 @@
 </div>
 
 {{!-- hidden input field to see post.id --}}
-<input type="hidden" name="post-id" value="{{post.id}}"/>
-{{!-- {{#if loggedIn}} --}}
+<input type="hidden" name="postId" value="{{post.id}}"/>
 <div class="card">
   <div class="card-header"></div>
-  <form class="card-body" id="new-comment-form">
+  {{!-- if user login user can add comments on particular post --}}
+  <form class="card-body" id="newCommentForm">
     <p class="FormUserName">Comment</p>
-    <textarea class="formInputvalues" id="comment-body" name="comment-body"></textarea>
+    <textarea class="formInputvalues" id="commentBody" name="commentBody"></textarea>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 {{> comments post.comments}}
 </div>
-{{!-- {{/if}} --}}
+
 
 {{!-- link to comment.js file  --}}
 <script src="/js/comment.js"></script>

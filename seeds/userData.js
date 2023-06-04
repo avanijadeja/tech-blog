@@ -1,4 +1,4 @@
-// User model seeds file 
+// User model seeds file
 const { User } = require("../models");
 
 const userdata = [
@@ -16,6 +16,7 @@ const userdata = [
   },
 ];
 
+// Add all data in User model using bulkcreate apply hooks like password bcrypt.
 const seedUser = () =>
   User.bulkCreate(userdata, {
     individualHooks: true,

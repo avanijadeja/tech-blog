@@ -4,13 +4,14 @@ const router = require("express").Router();
 // require User model.
 const { User } = require("../../models");
 
-// Signup.
+// for Signup.
 router.post("/signup", async (req, res) => {
   try {
     const newUser = await User.create({
       userName: req.body.userName,
       password: req.body.password,
     });
+    // Save user information for session
     req.session.save(() => {
       req.session.userId = newUser.id;
       req.session.userName = newUser.userName;
@@ -22,7 +23,7 @@ router.post("/signup", async (req, res) => {
   }
 });
 
-// Login.
+// For Login.
 router.post("/login", async (req, res) => {
   try {
     const user = await User.findOne({
@@ -34,11 +35,13 @@ router.post("/login", async (req, res) => {
       res.status(400).json({ message: "No user account found!" });
       return;
     }
+    // check password validation
     const validPassword = user.checkPassword(req.body.password);
     if (!validPassword) {
       res.status(400).json({ message: "No user account found!" });
       return;
     }
+    // save user information for session.
     req.session.save(() => {
       req.session.userId = user.id;
       req.session.userName = user.userName;

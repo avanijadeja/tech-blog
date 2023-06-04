@@ -2,14 +2,14 @@
 <div class="card">
   <h2 class="card-header">Edit Post</h2>
   {{! editPost form }}
-  <form class="card-body" id="editPost-form">
+  <form class="card-body" id="editPostForm">
     <div>
       <label class="FormUserName">Title</label>
       {{! postTitle from post model  }}
       <input
         class="formInputvalues"
         type="text"
-        name="post-title"
+        name="postTitle"
         value="{{post.postTitle}}"
       />
     </div>
@@ -17,13 +17,13 @@
     <div>
       <label class="FormUserName">Content</label>
       <textarea
-        class="form-textarea formInputvalues"
+        class="formTextarea formInputvalues"
         name="post-body"
         data-number="8"
       >{{post.postContent}}</textarea>
     </div>
     <button class="btn btn-primary" type="submit">Update Post</button>
-    <input type="hidden" name="post-id" value="{{post.id}}" />
+    <input type="hidden" name="postId" value="{{post.id}}" />
   </form>
   <div class="card-body">
     <button class="btn btn-primary" type="click" id="delete-btn">Delete</button>

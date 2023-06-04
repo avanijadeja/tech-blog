@@ -18,7 +18,7 @@ const postdata = [
     userId: 3,
   },
 ];
-
+// add all data in Post model using bulCreate
 const seedPost = () => Post.bulkCreate(postdata);
 
 // export seedPost

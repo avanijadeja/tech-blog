@@ -1,10 +1,10 @@
 // edit and delete post javascript file
 // for particular post get first postid from hidden input field.
-const postId = document.querySelector('input[name="post-id"]').value;
+const postId = document.querySelector('input[name="postId"]').value;
 const editFormHandler = async (event) => {
   event.preventDefault();
-  // using queryselector get post-title and content
-  const postTitle = document.querySelector('input[name="post-title"]').value;
+  // using queryselector get postTitle and content
+  const postTitle = document.querySelector('input[name="postTitle"]').value;
   const postContent = document.querySelector(
     'textarea[name="post-body"]'
   ).value;
@@ -40,7 +40,7 @@ const deleteClickHandler = async () => {
 };
 // Eventlistner fot editPostForm.
 document
-  .querySelector("#editPost-form")
+  .querySelector("#editPostForm")
   .addEventListener("submit", editFormHandler);
 // Eventlistner for delete button.
 document

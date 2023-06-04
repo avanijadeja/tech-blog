@@ -1,3 +1,4 @@
+// require User,Post,Comment 
 const User = require("./User");
 const Post = require("./Post");
 const Comment = require("./Comment");

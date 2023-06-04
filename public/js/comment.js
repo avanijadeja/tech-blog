@@ -1,11 +1,11 @@
 // comment js file
 
 // if user login get postid from hiddeninput field
-const postId = document.querySelector('input[name="post-id"]').value;
+const postId = document.querySelector('input[name="postId"]').value;
 const commentFormHandler = async (event) => {
   event.preventDefault();
   const commentData = document.querySelector(
-    'textarea[name="comment-body"]'
+    'textarea[name="commentBody"]'
   ).value;
   // post data
   if (commentData) {
@@ -26,7 +26,7 @@ const commentFormHandler = async (event) => {
     }
   }
 };
-// Eventlistner for new-comment-form
+// Eventlistner for newCommentForm
 document
-  .querySelector("#new-comment-form")
+  .querySelector("#newCommentForm")
   .addEventListener("submit", commentFormHandler);
