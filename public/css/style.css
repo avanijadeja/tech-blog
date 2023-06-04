@@ -30,13 +30,14 @@ body {
 
 /* navbar */
 .navbar {
-  display: flex;
-  justify-content: space-between;
+  /* justify-content: space-around; */
   background-color: var(--brown);
   width: 100%;
-  position: fixed;
 }
-
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+}
 .navbar a {
   color: var(--light-green);
 }
@@ -98,6 +99,8 @@ h2 a:visited {
   border-radius: var(--border-size);
   border: solid;
   border-color: var(--brown);
+  background-color: var(--light-green);
+
   margin: 0 0 10px 0;
 }
 
