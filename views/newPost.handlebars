@@ -1,0 +1,24 @@
+{{! new post handlebars }}
+<div class="card">
+  <h2 class="card-header">Create New Post</h2>
+  {{!  Created form for new post post.id is hidden because its autoincrement }}
+  <form class="card-body" id="newPost-form">
+    <input type="hidden" name="post-id" value="{{post.id}}" />
+    <div>
+      <label class="FormUserName">Title</label>
+      <input class="formInputvalues" type="text" name="post-title" />
+    </div>
+    <div>
+      <label class="FormUserName">Content</label>
+      <textarea
+        class="form-textarea formInputvalues"
+        name="post-body"
+        data-number="8"
+      ></textarea>
+    </div>
+    {{! create button }}
+    <button class="btn btn-primary">CREATE</button>
+  </form>
+</div>
+{{! link to new.js script file }}
+<script src="/js/new.js"></script>
