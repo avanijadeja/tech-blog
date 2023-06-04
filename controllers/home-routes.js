@@ -22,4 +22,54 @@ router.get("/", async (req, res) => {
   }
 });
 
+// For particular post
+router.get("/post/:id", withAuth, async (req, res) => {
+  try {
+    const postData = await Post.findOne({
+      // get the data for particular post id which passed in paramater like res.params.id
+      where: { id: req.params.id },
+      include: [
+        User,
+        {
+          model: Comment,
+          include: [User],
+        },
+      ],
+    });
+    // if postData has value get data
+    if (postData) {
+      const post = postData.get({ plain: true });
+      //render to postData handlebars
+      res.render("postData", { post, loggedIn: req.session.loggedIn });
+    } else {
+      res.status(404).end();
+    }
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
+// for login
+router.get("/login", (req, res) => {
+  if (req.session.loggedIn) {
+    // if user login redirect to user dashboard
+    res.redirect("/dashboard");
+    return;
+  }
+  //else user login form
+  res.render("login");
+});
+
+// for signup
+router.get("/signup", (req, res) => {
+  if (req.session.loggedIn) {
+    // if user login redirect to user dashboard
+    res.redirect("/dashboard");
+    return;
+  }
+  // else render signup form
+  res.render("signup");
+});
+
+// exports router
+module.exports = router;
