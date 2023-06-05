@@ -51,7 +51,13 @@ so applicaiton now starts user have to write localhost:3001 in browser so user c
 
 # Usage
 
-![Video_gifformat]()
+![Video_gifformat](./public/images/techblog_video.gif)
+![home_page](./public/images/homepage.png)
+![login](./public/images/loginpage.png)
+![userdashboard](./public/images/userdashboard.png)
+![newpost](./public/images/newpost.png)
+![updatedeletepost](./public/images/updatedeletepost.png)
+![commentpost](./public/images/comment.png)
 
 The URL of the functional, deployed application - https://avani-techblog.herokuapp.com/
 
