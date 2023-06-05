@@ -241,6 +241,7 @@ input {
   align-items: center;
 }
 
+.col-8,
 .col-9 {
   width: auto;
 }
