@@ -25,8 +25,6 @@ In Tech-blog application ,
 - when user click on the logout option in the navigation,then user signed out of the site.
 - when user idle on the site for more than a set time, then user able to view posts and comments but I am prompted to log in again before I can add, update, or delete posts.
 
-For this, I used MVC, Model-View-Controller paradigm.I used express-handlebars package to use Handlebars.js for user Views, use the MySQL2Links to an external site. and SequelizeLinks to an external site. packages to connect to a MySQL database for user Models, and create an Express.js API for user Controllers.the dotenv packageLinks to an external site. to use environment variables, the bcrypt packageLinks to an external site. to hash passwords, and the express-sessionLinks to an external site. and connect-session-sequelizeLinks to an external site. packages to add authentication.The express-sessionLinks to an external site. package stores the session data on the client in a cookie. When user idle on the site for more than a set time, the cookie will expire and user will be required to log in again to start a new session.
-
 In this application, I learned MVC and how to arranged files in model, view,controller style.I used Bcrypt,session,dotenv,express,handlebars,sql,sequelize.so now I can create full functional website.
 
 # Table of Contents
