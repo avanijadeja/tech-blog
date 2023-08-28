@@ -59,7 +59,7 @@ so applicaiton now starts user have to write localhost:3001 in browser so user c
 ![updatedeletepost](./public/images/updatedeletepost.png)
 ![commentpost](./public/images/comment.png)
 
-The URL of the functional, deployed application - https://avani-techblog.herokuapp.com/
+The URL of the functional, deployed application - https://techblog-11-55e6b22819fa.herokuapp.com/
 
 The URL of the GitHub repository - https://github.com/avanijadeja/tech-blog
 
